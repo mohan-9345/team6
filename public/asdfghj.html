@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login and Signup Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4caf50;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <form id="loginForm">
+        <h2>Login</h2>
+        <input type="text" id="loginUsername" placeholder="Username" required>
+        <input type="password" id="loginPassword" placeholder="Password" required>
+        <input type="checkbox" id="showPassword" onclick="togglePassword()"> Show Password
+        <button type="button" onclick="login()">Login</button>
+    </form>
+
+    <form id="signupForm" style="margin-left: 20px;">
+        <h2>Signup</h2>
+        <input type="text" id="signupUsername" placeholder="Username" required>
+        <input type="password" id="signupPassword" placeholder="Password" required>
+        <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
+        <input type="checkbox" id="showPassword" onclick="togglePassword()"> Show Password
+        <button type="button" onclick="signup()">Signup</button>
+    </form>
+
+    <script>
+        function login() {
+            var username = document.getElementById('loginUsername').value;
+            var password = document.getElementById('loginPassword').value;
+
+            if (password.length < 8) {
+                alert('Password must be at least 8 characters long.');
+            } else {
+                alert('Login successfully! Welcome, ' + username);
+                // Redirect to the home page (Index.html) here
+                window.location.href = 'Index.html';
+            }
+        }
+
+        function signup() {
+            var username = document.getElementById('signupUsername').value;
+            var password = document.getElementById('signupPassword').value;
+            var confirmPassword = document.getElementById('confirmPassword').value;
+
+            if (password !== confirmPassword) {
+                alert('Passwords do not match. Please enter correct password.');
+            } else if (password.length < 8) {
+                alert('Password must be at least 8 characters long.');
+            } else {
+                alert('Welcome to Vacation Outing, ' + username);
+                // Redirect to the home page (Index.html) here
+                window.location.href = 'Index.html';
+            }
+        }
+
+        function togglePassword() {
+            var passwordInput = document.getElementById('loginPassword');
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+            } else {
+                passwordInput.type = 'password';
+            }
+        }
+    </script>
+
+</body>
+</html>

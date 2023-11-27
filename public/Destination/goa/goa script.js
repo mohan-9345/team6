@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 /**
  * navbar toggle
@@ -19,7 +19,7 @@ const navToggleEvent = function (elem) {
       overlay.classList.toggle("active");
     });
   }
-}
+};
 
 navToggleEvent(navElemArr);
 navToggleEvent(navLinks);
@@ -32,7 +32,6 @@ const header = document.querySelector("[data-header]");
 const goTopBtn = document.querySelector("[data-go-top]");
 
 window.addEventListener("scroll", function () {
-
   if (window.scrollY >= 200) {
     header.classList.add("active");
     goTopBtn.classList.add("active");
@@ -40,19 +39,4 @@ window.addEventListener("scroll", function () {
     header.classList.remove("active");
     goTopBtn.classList.remove("active");
   }
-
 });
-
-/**
- * Display the selected option
- */
-const selectElement = document.getElementById('options');
-const selectedOptionElement = document.getElementById('selectedOption');
-
-selectElement.addEventListener('change' , function() {
-selectedOptionElement.textContent = selectElement.value;
-});
-
-function booking() {
-  alert("Your Goa Trip is Successfully Booked. Enjoy your trip! We will Contact you soon"); 
-}

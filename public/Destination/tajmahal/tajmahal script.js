@@ -55,5 +55,6 @@ selectedOptionElement.textContent = selectElement.value;
 
 function booking() {
   alert("Your Tajmahal Trip is Successfully Booked. Enjoy your trip! We will Contact you Soon");
-  
+  location.reload();
+  return false;
 }

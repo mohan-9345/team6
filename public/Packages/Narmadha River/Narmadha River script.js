@@ -42,18 +42,3 @@ window.addEventListener("scroll", function () {
   }
 
 });
-
-/**
- * Display the selected option
- */
-const selectElement = document.getElementById('options');
-const selectedOptionElement = document.getElementById('selectedOption');
-
-selectElement.addEventListener('change' , function() {
-selectedOptionElement.textContent = selectElement.value;
-});
-
-function booking() {
-  alert("Your Narmada River  Trip is Successfully Booked. Enjoy your trip! We will Contact you Soon");
-  
-}

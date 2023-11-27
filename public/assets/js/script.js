@@ -43,5 +43,13 @@ window.addEventListener("scroll", function () {
 
 function booking() {
   alert("Subscribed");
-  
+}
+/**
+ * chatbot
+ */
+document.getElementById("open-chatbot").addEventListener("click", openChatbot);
+
+function openChatbot() {
+  // Your code to open the chatbot goes here
+  console.log("Chatbot opened!");
 }

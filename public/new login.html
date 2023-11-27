@@ -1,273 +1,155 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-   
-    <style>
-        body {
-    width: 100%;
-    height: 100vh;
-    margin: 0;
-    padding: 0;
-}
-
-.center {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: url(assets/images/login\ banner.jpg);
-    background-size: cover;
-    background-attachment: fixed;
-}
-
-form {
-    width: 400px;
-    height: 500px;
-    box-sizing: border-box;
-    border-radius: 5mm;
-    padding: 40px 30px;
-    backdrop-filter: blur(5px) saturate(160%);
-    -webkit-backdrop-filter: blur(5px) saturate(160%);
-    background: transparent; /* Changed to solid black */
-    border: 1mm solid rgba(255, 255, 255, 0.65);
-    position: relative;
-}
-
-.title {
-    width: 100%;
-    font-family: edwardian script itc;
-    font-size: 45px;
-    text-align: center;
-    margin-bottom: 20px;
-    color: white;
-}
-
-.inputs {
-    width: 100%;
-    height: fit-content;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-
-.inputf {
-    width: 100%;
-    height: fit-content;
-    box-sizing: border-box;
-    margin: 15px 0;
-    position: relative;
-}
-
-.input {
-    width: 100%;
-    height: 45px;
-    box-sizing: border-box;
-    border: none;
-    border-bottom: 0.55mm solid rgb(255, 255, 255);
-    background: none;
-    padding: 0 15px;
-    font-family: poppins;
-    font-size: 15px;
-    color: white;
-    outline: none;
-}
-
-.input::placeholder {
-    color: rgb(241, 232, 232);
-}
-
-.label {
-    position: absolute;
-    top: 0;
-    left: 0;
-    color: white;
-    font-size: 13px;
-    font-weight: 500;
-    font-family: poppins;
-    opacity: 0;
-    z-index: -1;
-    transition: 0.25s ease-out;
-}
-
-.input:focus + .label {
-    top: -20px;
-    opacity: 1;
-    z-index: 1;
-}
-
-.input:focus::placeholder {
-    opacity: 0;
-}
-
-.input:not(:placeholder-shown) + .label {
-    top: -20px;
-    opacity: 1;
-    z-index: 1;
-}
-
-.icon {
-    color: white;
-    position: absolute;
-    right: 0px;
-    top: 50%;
-    transform: translate(0, -50%);
-    font-size: 18px;
-}
-
-.links {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    font-size: 12px;
-    font-family: poppins;
-    margin-bottom: 50px;
-    color: white;
-}
-
-.links label {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.links a {
-    font-weight: 600;
-    color: white;
-}
-
-.btn {
-    width: 100%;
-    height: 40px;
-    background: rgb(255, 255, 255);
-    outline: none;
-    border: none;
-    cursor: pointer;
-    border-radius: 6mm;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 10px;
-}
-
-.btn span {
-    color: rgb(40, 40, 40);
-    font-family: poppins;
-    font-size: 20px;
-}
-
-.text {
-    width: 100%;
-    font-family: poppins;
-    font-size: 13px;
-    text-align: center;
-    color: rgb(240, 240, 240);
-}
-
-.box::before{
-    content:"";
-    position:absolute;
-    top: 50%;
-    left: 50%;
-    width: 400px;
-    height: 450px;
-    background:linear-gradient(0deg,
-    transparent,#45f3ff);
-    transform-origin:bottom right;
-    animation: animate 6s linear infinite;
-    animation-delay: -3s;
-}
-
-.text a {
-    color: rgb(0, 0, 0);
-    font-weight: 600;
-}
-
-
-.btn span {
-    display: block;
-}
-
-.btn.active span {
-    display: none;
-}
-
-.password-toggle {
-            position: absolute;
-            top: 50%;
-            right: 5px;
-            font-size: 30px;
-            color: white;
-            transform: translateY(-50%);
-            cursor: pointer;
-}
-
-
-
-    </style>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login Form</title>
-    <link rel="shortcut icon" href="./favicon.png" type="image/svg+xml">
-    <link rel="stylesheet" href="style.css">
-    <!--Google Fonts and Icons-->
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Round|Material+Icons+Sharp|Material+Icons+Two+Tone"
-      rel="stylesheet"/>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
-      rel="stylesheet"/>
+    <title>Vacation Outing - Login</title>
+    <link rel="shortcut icon" href="./favicon.png" type="image/svg+xml" />
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        background-image: url(/public/assets/images/login\ banner.jpg);
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .center {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: url(assets/images/login\ banner.jpg);
+        background-size: cover;
+        background-attachment: fixed;
+      }
+
+      form {
+        width: 400px;
+        height: 520px;
+        box-sizing: border-box;
+        border-radius: 4mm;
+        padding: 40px 30px;
+        backdrop-filter: blur(5px) saturate(160%);
+        -webkit-backdrop-filter: blur(5px) saturate(160%);
+        background: transparent; /* Changed to solid black */
+        border: 1mm solid rgba(255, 255, 255, 0.65);
+        position: relative;
+      }
+      .head {
+        font-family: "Times New Roman", Times, serif;
+        font-size: 35px;
+        color: white;
+      }
+      label {
+        font-weight: bold;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;
+        color: white;
+        display: block;
+        margin-bottom: 2px; /* Added margin for better spacing */
+      }
+
+      input[type="text"],
+      input[type="password"],
+      input[type="email"] {
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0; /* Adjusted margin for better spacing */
+        border: 2px solid;
+        border-radius: 5px;
+        border-color: antiquewhite;
+        font-size: 18px;
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+          "Lucida Sans", Arial, sans-serif;
+        background-color: white;
+      }
+      button {
+        margin-top: 10px; /* Added margin for better spacing */
+        border: 2px solid;
+        padding: 2%;
+        border-radius: 10px;
+        color: rgb(255, 0, 0);
+        font-family: "Times New Roman", Times, serif;
+        font-size: 30px;
+        background-color: rgb(238, 233, 233);
+        width: 50%;
+        cursor: pointer; /* Added cursor style for better UX */
+      }
+
+      .text {
+        width: 100%;
+        font-family: poppins;
+        font-size: 18px;
+        text-align: center;
+        color: rgb(240, 240, 240);
+        margin-top: 4%;
+      }
+    </style>
   </head>
-  
   <body>
-    
     <div class="center">
-      <form action="/">
-        <div class="title">Login</div>
-        <span class="inputs">
-          <span class="inputf">
-            <input type="email" class="input" placeholder="Email" />
-            <span class="label">Email</span>
-            <span class="material-icons icon">email</span>
-          </span>
-          <span class="inputf">
-            <span class="box::before">
-            <input type="password" class="input" id="password" placeholder="Password" />
-            <span class="label">Password</span>
-            <span class="material-icons icon">lock</span>
-          </span>
-        </span>
-        <div class="links">
-          <a href="#">Forgot Password</a>
-          <label for="remember">
-            <input type="checkbox" id="remember" />
-            Remember Me
-          </label>
-        </div>
-        <button type="button" class="btn"  onclick="login()">
-          <span>Login</span>
-        </button>
+      <form id="loginForm" action="/">
+        <center>
+          <h2 class="head">Login</h2>
+        </center>
+
+        <label for="loginUsername">Name</label>
+        <input type="text" id="loginUsername" placeholder="Username" required />
+
+        <label for="loginEmail">Email</label>
+        <input type="email" id="loginEmail" placeholder="Email" required />
+
+        <label for="loginPassword">Password</label>
+        <input
+          type="password"
+          id="loginPassword"
+          placeholder="Password"
+          required
+        />
+
+        <input type="checkbox" id="showPassword" onclick="togglePassword()" />
+        Show Password
+        <br />
+        <center>
+          <button type="button" onclick="login()">Login</button>
+        </center>
         <div class="text">
-          New user? Create an account <a href="registerform.html">Register</a>
+          New User?Create an account <a href="/signup">Signup</a>
         </div>
       </form>
     </div>
     <script>
-      
-    const selectElement = document.getElementById('options');
-const selectedOptionElement = document.getElementById('selectedOption');
+      function login() {
+        var username = document.getElementById("loginUsername").value;
+        var email = document.getElementById("loginEmail").value;
+        var password = document.getElementById("loginPassword").value;
 
-selectElement.addEventListener('change' , function() {
-selectedOptionElement.textContent = selectElement.value;
-});
+        // Check if any of the required fields is empty
+        if (username === "" || email === "") {
+          alert("Please fill in all the details.");
+        } else if (password.length < 8) {
+          alert("Password must be at least 8 characters long.");
+        } else {
+          alert("Welcome to Vacation Outing, " + username);
+          // Redirect to the home page (Index.html) here
+          window.location.href = "Index.html";
+        }
+      }
 
-function login() {
-  alert("Kindly Register First !");
-  location.reload();
-}
+      function togglePassword() {
+        var passwordInput = document.getElementById("loginPassword");
+        if (passwordInput.type === "password") {
+          passwordInput.type = "text";
+        } else {
+          passwordInput.type = "password";
+        }
+      }
     </script>
   </body>
 </html>

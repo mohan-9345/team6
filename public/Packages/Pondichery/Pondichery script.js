@@ -44,16 +44,10 @@ window.addEventListener("scroll", function () {
 });
 
 /**
- * Display the selected option
+ * Display the alert
  */
-const selectElement = document.getElementById('options');
-const selectedOptionElement = document.getElementById('selectedOption');
-
-selectElement.addEventListener('change' , function() {
-selectedOptionElement.textContent = selectElement.value;
-});
-
 function booking() {
   alert("Your Pondichery Trip is Successfully Booked. Enjoy your trip! We will Contact you Soon");
-  
+  location.reload();
+  return false;
 }

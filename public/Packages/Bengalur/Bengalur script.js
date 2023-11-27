@@ -55,5 +55,7 @@ selectedOptionElement.textContent = selectElement.value;
 
 function booking() {
   alert("Your Bangalore Trip is Successfully Booked. Enjoy your trip! We will Contact you Soon");
+  location.reload();
+  return false;
   
 }

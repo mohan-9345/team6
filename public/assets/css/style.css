@@ -291,8 +291,6 @@ body {
   color: inherit;
 }
 
-
-
 .header-bottom {
   border-bottom: 1px solid hsla(0, 0%, 100%, 0.1);
 }
@@ -433,7 +431,7 @@ body {
 }
 
 .hero-title {
-  margin-bottom: 20px; 
+  margin-bottom: 20px;
   animation: textDelay 2s ease-out forwards;
 }
 @keyframes textDelay {
@@ -446,7 +444,6 @@ body {
     opacity: 1;
   }
 }
-
 
 .hero-text {
   color: var(--white);
@@ -529,7 +526,6 @@ body {
   font-size: var(--fs-6);
   text-transform: uppercase;
   margin-bottom: 8px;
-  
 }
 
 .popular-card .card-title {
@@ -730,10 +726,19 @@ body {
   color: var(--white);
 }
 
-.logo-png{
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+.video-container {
+  position: relative;
+  perspective: 1000px;
+}
+
+video {
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+}
+
+.video-container:hover video {
+  transform: rotateY(20deg);
+  box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.2);
 }
 
 .cta .section-text {
@@ -918,6 +923,23 @@ address {
 
 .go-top:is(:hover, :focus) {
   opacity: 1;
+}
+
+/*-----------------------------------*\
+ * #CHATBOT
+\*-----------------------------------*/
+
+.chatbot {
+  position: fixed; /* or absolute, depending on your layout needs */
+  bottom: 0;
+  right: 15px;
+  padding: 10px;
+  background-color: #022188;
+  color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 60px 70px;
+  cursor: pointer;
+  margin-bottom: 70px;
 }
 
 /*-----------------------------------*\
@@ -1288,7 +1310,6 @@ address {
   .hero .container {
     max-width: 740px;
   }
-
 
   /**
    * POPULAR
